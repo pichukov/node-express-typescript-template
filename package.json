@@ -21,8 +21,6 @@
   "dependencies": {
     "@types/express": "^4.16.0",
     "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "kafka-typescript": "0.0.2",
-    "node-rdkafka": "^2.5.0"
+    "express": "^4.16.3"
   }
 }
