@@ -1,7 +1,10 @@
-export class ErrorObject {
-    public message: string;
+export enum ErrorCode {
+    None = 0
+}
 
-    constructor(message: string) {
-        this.message = message;
-    }
+export class ErrorObject {
+    constructor(
+        public message: string,
+        public errorCode: ErrorCode
+    ) {}
 }

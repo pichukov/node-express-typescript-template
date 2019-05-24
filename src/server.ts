@@ -1,7 +1,9 @@
-import app from './app';
+import {LogService} from './api/services/logService';
+import {App} from './app';
 
 const PORT = 3000;
+const logger = new LogService();
 
-app.listen(PORT, () => {
-    console.log('The app listening on port 3000');
+new App(logger).app.listen(PORT, () => {
+    console.log(`The app listening on port ${PORT}`);
 });

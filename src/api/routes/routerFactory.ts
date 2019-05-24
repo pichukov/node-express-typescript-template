@@ -1,5 +1,6 @@
 import {Router} from 'express';
-import {TestRouter} from './testRouter';
+import {ILogger} from '../services/logService';
+import {MyRoute} from './myRoute';
 
 export interface IAbstractRoute {}
 
@@ -7,7 +8,7 @@ export class RouterFactory {
 
     public static routes: IAbstractRoute[] = [];
 
-    public static createRoutes(router: Router) {
-        RouterFactory.routes.push(new TestRouter(router));
+    public static createRoutes(router: Router, logger: ILogger) {
+        RouterFactory.routes.push(new MyRoute(router, logger));
     }
 }

@@ -8,6 +8,7 @@
         "sourceMap": true,
         "outDir": "dist",
         "baseUrl": ".",
+        "resolveJsonModule": true,
         "paths": {
             "*": [
                 "node_modules/*",
@@ -15,10 +16,12 @@
             ]
         },
         "lib": [
-            "es2015"
+            "es2015",
+            "dom"
         ]
     },
     "include": [
-        "src/**/*"
+        "src/**/*",
+        "src/api/models/config/*.json"
     ]
 }
